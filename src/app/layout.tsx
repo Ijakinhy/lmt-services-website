@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Figtree, Libre_Caslon_Text, Libre_Caslon_Display } from "next/font/google";
+
+import NavBar from "@/components/Navbar";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,6 +12,20 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const figtree = Figtree({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  display: 'swap',
+  variable: '--font-figtree',
+});
+
+const libreCaslon = Libre_Caslon_Text({
+  subsets: ['latin'],
+  weight: ['400', "700"],
+  display: 'swap',
+  variable: '--font-libre-caslon',
 });
 
 export const metadata: Metadata = {
@@ -25,8 +41,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${figtree.variable} ${libreCaslon.variable} antialiased overflow-auto`}
       >
+        <NavBar />
         {children}
       </body>
     </html>
