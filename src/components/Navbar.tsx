@@ -45,7 +45,7 @@ export default function NavBar() {
     return (
         <>
             <div
-                className={`fixed top-0 left-0 w-full h-24 py-6 px-4 md:px-4  lg:px-32 z-50 transition-colors duration-300 ${scrollY !== 0 ? "bg-[#03080d]" : "bg-transparent"
+                className={`fixed top-0 left-0 w-full h-24 py-6 px-4 md:px-6  lg:px-32 z-50 transition-colors duration-300 ${scrollY !== 0 ? "md:bg-[#03080d]" : "md:bg-transparent"
                     }`}
             >
                 <div className="container mx-auto flex items-center justify-between ">
@@ -55,12 +55,9 @@ export default function NavBar() {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden md:flex items-center relative gap-[59px]">
+                    <nav className="hidden md:flex items-center relative  md:gap-[30px] lg:gap-[59px]">
                         {menuLinks.map(item => <TextSlideUpDown href={item.href} key={item.label} className="text-white text-[16px] font-light tracking-wide h-[24px]" label={item.label} />)}
-                    </nav>
-                    {/* Right Side */}
-                    <div className="flex items-center justify-center space-x-4">
-
+                    </nav>                    <div className="flex items-center justify-center space-x-4">
 
                         <div className="bg-white text-[#03080d] py-2 px-9 text-[16px] rounded-full leading-[110%] font-medium tracking-tighter">
                             <TextSlideUpDown href="/" className=" h-[24px]  flex items-center justify-center  " label="CONNECT" />
@@ -83,7 +80,6 @@ export default function NavBar() {
             >
 
                 <div className="flex flex-col h-full">
-                    {/* Mobile Header */}
                     <div className="flex items-center justify-between p-4">
                         <Link id="link" href="/" onClick={toggleMenu}>
                             <Image
