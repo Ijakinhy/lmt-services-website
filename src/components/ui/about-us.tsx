@@ -75,9 +75,8 @@ function AnimatedStatistic({
 
   return (
     <div
-      className={`text-center lg:text-left transform transition-all duration-700 ease-out ${
-        isVisible ? `translate-y-0 opacity-100 ${delay}` : "translate-y-8 opacity-0"
-      }`}
+      className={`text-center lg:text-left transform transition-all duration-700 ease-out ${isVisible ? `translate-y-0 opacity-100 ${delay}` : "translate-y-8 opacity-0"
+        }`}
     >
       <div className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-2 transition-colors duration-300 hover:text-blue-400 cursor-default tabular-nums">
         <span suppressHydrationWarning>
@@ -134,29 +133,28 @@ export default function AboutUs() {
   ]
 
   return (
-     <section className="bg-white dark:bg-black text-gray-900 dark:text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
+    <section className="bg-white dark:bg-black text-gray-900 dark:text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         {/* Main content section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Left content */}
           <div
-            className={`space-y-6 transform transition-all duration-800 ease-out ${
-              isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-            }`}
+            className={`space-y-6 transform transition-all duration-800 ease-out ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+              }`}
           >
             <div className="space-y-2">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">LUCKYMOTECH SERVICES LIMITED</h1>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light italic">solution based</h2>
             </div>
 
-             <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-md leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-md leading-relaxed">
               We are an award winning Agency with top notch services and actions. We have our clients living worldwide.
             </p>
 
             <Button
               variant="secondary"
               size="lg"
-                 className="bg-gray-900 dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-100 active:bg-gray-700 dark:active:bg-gray-200 rounded-full px-6 sm:px-8 py-2 sm:py-3 font-semibold text-sm sm:text-base transition-all duration-200 hover:scale-105 active:scale-95 transform touch-manipulation"
+              className="bg-gray-900 dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-100 active:bg-gray-700 dark:active:bg-gray-200 rounded-full px-6 sm:px-8 py-2 sm:py-3 font-semibold text-sm sm:text-base transition-all duration-200 hover:scale-105 active:scale-95 transform touch-manipulation"
             >
               LEARN ABOUT US
             </Button>
@@ -164,13 +162,12 @@ export default function AboutUs() {
 
           {/* Right image */}
           <div
-            className={`relative transform transition-all duration-800 ease-out delay-200 ${
-              isLoaded ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
-            }`}
+            className={`relative transform transition-all duration-800 ease-out delay-200 ${isLoaded ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
+              }`}
           >
-               <div className="relative h-64 sm:h-80 md:h-96 w-full rounded-xl sm:rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105 active:scale-100 transform will-change-transform shadow-lg dark:shadow-2xl">
+            <div className="relative h-64 sm:h-80 md:h-96 w-full rounded-xl sm:rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105 active:scale-100 transform will-change-transform shadow-lg dark:shadow-2xl">
               <Image
-                src={ lmtPhoto }
+                src={lmtPhoto}
                 alt="Professional working on laptop"
                 fill
                 className="object-cover"
