@@ -52,26 +52,12 @@ export default function SaasMarketingPage() {
 
   return (
     <div className="bg-white dark:bg-black text-gray-900 dark:text-white min-h-screen transition-colors duration-300">
-      {/* Header */}
-       <header className="border-b border-gray-200 dark:border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <Link
-            href="/"
-            className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Services
-          </Link>
-        </div>
-      </header>
-
       {/* Hero Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1
-            className={`text-4xl sm:text-5xl lg:text-7xl font-bold mb-12 transform transition-all duration-800 ease-out ${
-              isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-            }`}
+            className={`text-4xl sm:text-5xl lg:text-7xl font-bold mb-12 transform transition-all duration-800 ease-out ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+              }`}
           >
             PROPERTY
             <br />
@@ -80,9 +66,8 @@ export default function SaasMarketingPage() {
 
           {/* Hero Image */}
           <div
-            className={`relative h-64 sm:h-80 lg:h-96 w-full rounded-2xl overflow-hidden mb-16 transform transition-all duration-800 ease-out delay-200 shadow-lg dark:shadow-2xl ${
-              isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-            }`}
+            className={`relative h-64 sm:h-80 lg:h-96 w-full rounded-2xl overflow-hidden mb-16 transform transition-all duration-800 ease-out delay-200 shadow-lg dark:shadow-2xl ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+              }`}
           >
             <Image
               src="/saas-hero.png"
@@ -102,11 +87,10 @@ export default function SaasMarketingPage() {
           {contentSections.map((section, index) => (
             <div
               key={section.id}
-              className={`transform transition-all duration-800 ease-out ${
-                isLoaded
+              className={`transform transition-all duration-800 ease-out ${isLoaded
                   ? "translate-y-0 opacity-100"
                   : "translate-y-8 opacity-0"
-              }`}
+                }`}
               style={{ transitionDelay: `${300 + index * 200}ms` }}
             >
               <div className="flex items-start space-x-4 mb-6">
@@ -124,16 +108,15 @@ export default function SaasMarketingPage() {
       </section>
 
       {/* Turning Ideas Into Reality Section */}
-       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Image */}
             <div
-              className={`relative h-64 sm:h-80 lg:h-96 rounded-2xl overflow-hidden transform transition-all duration-800 ease-out shadow-lg dark:shadow-2xl ${
-                isLoaded
+              className={`relative h-64 sm:h-80 lg:h-96 rounded-2xl overflow-hidden transform transition-all duration-800 ease-out shadow-lg dark:shadow-2xl ${isLoaded
                   ? "translate-x-0 opacity-100"
                   : "translate-x-8 opacity-0"
-              }`}
+                }`}
               style={{ transitionDelay: "900ms" }}
             >
               <Image
@@ -147,11 +130,10 @@ export default function SaasMarketingPage() {
 
             {/* Content */}
             <div
-              className={`space-y-6 transform transition-all duration-800 ease-out ${
-                isLoaded
+              className={`space-y-6 transform transition-all duration-800 ease-out ${isLoaded
                   ? "translate-x-0 opacity-100"
                   : "translate-x-8 opacity-0"
-              }`}
+                }`}
               style={{ transitionDelay: "1000ms" }}
             >
               <h2 className="text-3xl sm:text-4xl font-bold mb-6">
@@ -172,9 +154,8 @@ export default function SaasMarketingPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h2
-            className={`text-3xl sm:text-4xl font-bold mb-12 transform transition-all duration-800 ease-out ${
-              isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-            }`}
+            className={`text-3xl sm:text-4xl font-bold mb-12 transform transition-all duration-800 ease-out ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+              }`}
             style={{ transitionDelay: "1100ms" }}
           >
             OUR APPROACH
@@ -184,14 +165,13 @@ export default function SaasMarketingPage() {
             {approachPoints.map((point, index) => (
               <div
                 key={index}
-                className={`flex items-start space-x-4 transform transition-all duration-700 ease-out ${
-                  isLoaded
+                className={`flex items-start space-x-4 transform transition-all duration-700 ease-out ${isLoaded
                     ? "translate-y-0 opacity-100"
                     : "translate-y-4 opacity-0"
-                }`}
+                  }`}
                 style={{ transitionDelay: `${1200 + index * 100}ms` }}
               >
-                 <CheckCircle className="w-5 h-5 text-blue-500 dark:text-blue-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-blue-500 dark:text-blue-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-600 dark:text-gray-300 text-base sm:text-lg leading-relaxed">{point}</p>
               </div>
             ))}
@@ -202,7 +182,7 @@ export default function SaasMarketingPage() {
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-blue-600 dark:bg-blue-700 transition-colors duration-300">
         <div className="max-w-4xl mx-auto text-center">
-         <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">Ready to Transform Your SaaS Marketing?</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">Ready to Transform Your SaaS Marketing?</h2>
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
             Let's work together to create a comprehensive marketing strategy
             that drives growth and delivers results for your SaaS business.
@@ -229,9 +209,8 @@ export default function SaasMarketingPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div
-             className={`relative h-48 sm:h-64 lg:h-80 rounded-2xl overflow-hidden transform transition-all duration-800 ease-out shadow-lg dark:shadow-2xl ${
-              isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-            }`}
+            className={`relative h-48 sm:h-64 lg:h-80 rounded-2xl overflow-hidden transform transition-all duration-800 ease-out shadow-lg dark:shadow-2xl ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+              }`}
             style={{ transitionDelay: "1700ms" }}
           >
             <Image

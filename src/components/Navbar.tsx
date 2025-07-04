@@ -8,6 +8,7 @@ import { useState } from "react"
 import { animate, hover, motion } from "framer-motion"
 import TextSlideUpDown from "./text-slide-up-down"
 import useScrollDirection from "@/app/hooks/useScrollDirection"
+import { ThemeToggle } from "./theme-toggle"
 
 const menuLinks = [
     {
@@ -63,6 +64,8 @@ export default function NavBar() {
                             <TextSlideUpDown href="/" className=" h-[24px]  flex items-center justify-center  " label="CONNECT" />
 
                         </div>
+                        <ThemeToggle />
+
 
                         {/* Mobile Menu Button */}
                         <button onClick={toggleMenu} className="md:hidden text-white p-2" aria-label="Toggle menu">
@@ -91,12 +94,8 @@ export default function NavBar() {
                             />
                         </Link>
                         <div className="flex items-center space-x-4">
-                            <Button
-                                variant="outline"
-                                className="bg-white text-black hidden lg:block hover:bg-white/90 rounded-full text-sm px-4 py-2"
-                            >
-                                CONNECT
-                            </Button>
+                            <TextSlideUpDown href="/" className=" h-[24px]  flex items-center justify-center  " label="CONNECT" />
+
                             <button onClick={toggleMenu} className="text-white p-2" aria-label="Close menu">
                                 <X className="h-6 w-6" />
                             </button>
