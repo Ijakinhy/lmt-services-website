@@ -7,8 +7,17 @@ import Works from "@/components/ui/works"
 import { ThemeToggle } from "@/components/ui/theme-toggle"
 export default function Home() {
   return (
-    <main >
-      <HeroSection />
+    
+     
+    <main className="relative">
+       <HeroSection />
+      {/* Theme Toggle - Fixed position */}
+      <div className="fixed top-6 right-6 z-50">
+        <ThemeToggle />
+      </div>
+      <AboutUs />
+      <OurServices />
+      <Works />
     </main>
   );
 }

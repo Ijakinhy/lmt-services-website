@@ -1,10 +1,9 @@
-import type { Metadata } from "next";
+
 import { Geist, Geist_Mono, Figtree, Libre_Caslon_Text, Libre_Caslon_Display, Inter } from "next/font/google";
 
 import NavBar from "@/components/Navbar";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] })
 
 const figtree = Figtree({
   subsets: ['latin'],
@@ -19,6 +18,11 @@ const libreCaslon = Libre_Caslon_Text({
   display: 'swap',
   variable: '--font-libre-caslon',
 });
+import type React from "react"
+import type { Metadata } from "next"
+import "./globals.css"
+
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Marketing Agency",
@@ -31,9 +35,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${figtree.variable} ${libreCaslon.variable} antialiased overflow-auto`}
+        className={`${figtree.variable} ${libreCaslon.variable } ${inter.className} antialiased overflow-auto  bg-white dark:bg-black transition-colors duration-300`}
       >
         <NavBar />
         {children}
