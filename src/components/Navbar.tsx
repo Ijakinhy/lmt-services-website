@@ -33,7 +33,6 @@ const menuLinks = [
     }
 ]
 
-const MotionLink = motion(Link);
 export default function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
