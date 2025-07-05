@@ -35,23 +35,21 @@ export default function HomePricingSection() {
                 <div
                     className={`flex items-center justify-center gap-5`}
                 >
-                    <Button
-                        variant="secondary"
+                    <button
                         onClick={() => handlePlanChange("monthly")}
-                        className={`${changePlan === "monthly" ? " bg-gray-900 dark:bg-white/90 dark:text-[#03080d] text-white/90" : "dark:bg-transparent bg-white/90 text-[#03080d] dark:text-white/90"}  rounded-full  py-[1.8rem] lg:py-[2rem] px-[32px] lg:px-[45px] text-[18px] lg:text-[20px] font-bold cursor-pointer  hover:bg-transparent`}
+                        className={`${changePlan === "monthly" ? " bg-gray-900 dark:bg-white/90 dark:text-[#03080d] text-white/90" : "dark:bg-transparent bg-white/90 text-[#03080d] dark:text-white/90"}  rounded-full  py-[1.8rem] lg:py-[1.1rem] px-[32px] lg:px-[45px] text-[18px] lg:text-[20px] font-bold cursor-pointer `}
                     >
                         Monthly
-                    </Button>
-                    <Button
-                        variant="secondary"
-                        className={`${changePlan === "annually" ? " bg-gray-900 dark:bg-white/90 dark:text-[#03080d] text-white/90" : "dark:bg-transparent bg-white/90 text-[#03080d] dark:text-white/90"}  rounded-full  py-[1.8rem] lg:py-[2rem] px-[32px] lg:px-[45px] text-[18px] lg:text-[20px] font-bold cursor-pointer  hover:bg-transparent`}
+                    </button>
+                    <button
+                        className={`${changePlan === "annually" ? " bg-gray-900 dark:bg-white/90 dark:text-[#03080d] text-white/90" : "dark:bg-transparent bg-white/90 text-[#03080d] dark:text-white/90"}  rounded-full  py-[1.8rem] lg:py-[1.1rem] relative px-[32px] lg:px-[45px] text-[18px] lg:text-[20px] font-bold cursor-pointer`}
                         onClick={() => handlePlanChange("annually")}
                     >
                         Annually
-                        <span className={`${changePlan === "annually" ? "text-[#03080d] dark:bg-gray-900 bg-white/90 dark:text-white/90 " : "bg-gray-900 dark:bg-white/90 text-white/90 dark:text-[#03080d] "} text-xs py-2 px-1 rounded-full `}>
+                        <span className={`${changePlan === "annually" ? "text-[#03080d] dark:bg-gray-900 bg-white/90 dark:text-white/90 " : "bg-gray-900 dark:bg-white/90 text-white/90 dark:text-[#03080d] "} text-[14px] py-[5px] px-1 rounded-full ml-2 font-light leading-0 tracking-tighter  `}>
                             (-20% off)
                         </span>
-                    </Button>
+                    </button>
                 </div>
             </div>
             <div className="px-8 sm:px-6 md:px-4 lg:px-0">
