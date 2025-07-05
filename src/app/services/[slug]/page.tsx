@@ -2,6 +2,7 @@ import { notFound } from "next/navigation"
 import Link from "next/link"
 import { ArrowLeft, CheckCircle, Target, TrendingUp, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import ServicePricingCard from "@/components/service-pricing-card"
 import { servicesData } from "@/lib/services"
 
 
@@ -17,19 +18,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
 
   return (
     <div className="bg-black text-white min-h-screen">
-      {/* Header */}
-      <header className="border-b border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <Link
-            href="/"
-            className="inline-flex items-center text-gray-400 hover:text-white transition-colors duration-200"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Services
-          </Link>
-        </div>
-      </header>
-
       {/* Hero Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -115,31 +103,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">Pricing Plans</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {service.pricing.map((plan, index) => (
-              <div
-                key={index}
-                className={`bg-gray-900 rounded-2xl p-8 ${index === 1 ? "ring-2 ring-blue-500 scale-105" : ""}`}
-              >
-                <h4 className="text-xl font-bold mb-4">{plan.plan}</h4>
-                <div className="text-3xl font-bold mb-6 text-blue-400">{plan.price}</div>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3" />
-                      <span className="text-sm text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Button
-                  className={`w-full ${index === 1 ? "bg-blue-600 hover:bg-blue-700" : "bg-gray-700 hover:bg-gray-600"
-                    } transition-colors duration-200`}
-                >
-                  Choose Plan
-                </Button>
-              </div>
-            ))}
-          </div>
+          <ServicePricingCard service={service.pricing} />
         </div>
       </section>
 

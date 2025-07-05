@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${figtree.variable} ${libreCaslon.variable } ${inter.className} antialiased overflow-auto  bg-white dark:bg-black transition-colors duration-300`}
+        className={`${figtree.variable} ${libreCaslon.variable} ${inter.className} antialiased overflow-auto  bg-white dark:bg-black transition-colors duration-300`}
       >
         <NavBar />
         {children}

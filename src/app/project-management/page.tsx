@@ -88,8 +88,8 @@ export default function SaasMarketingPage() {
             <div
               key={section.id}
               className={`transform transition-all duration-800 ease-out ${isLoaded
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-8 opacity-0"
+                ? "translate-y-0 opacity-100"
+                : "translate-y-8 opacity-0"
                 }`}
               style={{ transitionDelay: `${300 + index * 200}ms` }}
             >
@@ -114,8 +114,8 @@ export default function SaasMarketingPage() {
             {/* Image */}
             <div
               className={`relative h-64 sm:h-80 lg:h-96 rounded-2xl overflow-hidden transform transition-all duration-800 ease-out shadow-lg dark:shadow-2xl ${isLoaded
-                  ? "translate-x-0 opacity-100"
-                  : "translate-x-8 opacity-0"
+                ? "translate-x-0 opacity-100"
+                : "translate-x-8 opacity-0"
                 }`}
               style={{ transitionDelay: "900ms" }}
             >
@@ -131,8 +131,8 @@ export default function SaasMarketingPage() {
             {/* Content */}
             <div
               className={`space-y-6 transform transition-all duration-800 ease-out ${isLoaded
-                  ? "translate-x-0 opacity-100"
-                  : "translate-x-8 opacity-0"
+                ? "translate-x-0 opacity-100"
+                : "translate-x-8 opacity-0"
                 }`}
               style={{ transitionDelay: "1000ms" }}
             >
@@ -166,8 +166,8 @@ export default function SaasMarketingPage() {
               <div
                 key={index}
                 className={`flex items-start space-x-4 transform transition-all duration-700 ease-out ${isLoaded
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-4 opacity-0"
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-4 opacity-0"
                   }`}
                 style={{ transitionDelay: `${1200 + index * 100}ms` }}
               >
