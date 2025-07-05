@@ -38,13 +38,13 @@ export function ThemeToggle() {
       variant="ghost"
       size="icon"
       onClick={toggleTheme}
-      className="w-10 h-10 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors duration-200"
+      className="w-10 h-10 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 group transition-colors duration-200"
       aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
     >
       {theme === "light" ? (
-        <Moon className="w-4 h-4 text-gray-700 dark:text-gray-300" />
+        <Moon className="w-4 h-4 text-gray-100  group-hover:text-gray-700 dark:text-gray-300" />
       ) : (
-        <Sun className="w-4 h-4 text-gray-700 dark:text-gray-300" />
+        <Sun className="w-4 h-4 text-gray-100 group-hover:text-gray-700 dark:text-gray-300" />
       )}
     </Button>
   )
