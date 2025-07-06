@@ -21,6 +21,7 @@ const libreCaslon = Libre_Caslon_Text({
 import type React from "react"
 import type { Metadata } from "next"
 import "./globals.css"
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -37,10 +38,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${figtree.variable} ${libreCaslon.variable} ${inter.className} antialiased overflow-auto  bg-white dark:bg-black transition-colors duration-300`}
+        className={`${figtree.variable} ${libreCaslon.variable} ${inter.className} antialiased overflow-auto flex flex-col relative min-h-screen bg-white dark:bg-black transition-colors duration-300  `}
       >
-        <NavBar />
-        {children}
+        <div className="relative min-h-screen flex flex-col">
+
+          <NavBar />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   )

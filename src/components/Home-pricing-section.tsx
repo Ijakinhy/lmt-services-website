@@ -3,6 +3,7 @@
 import { servicesData } from "@/lib/services";
 import { Button } from "./ui/button";
 import ServicePricingCard from "./service-pricing-card";
+import { motion } from "framer-motion";
 import { useState } from "react";
 
 
@@ -20,19 +21,47 @@ export default function HomePricingSection() {
                 <div
                     className={`mb-24 `}
                 >
-                    <div className="text-sm font-medium text-slate-800 dark:text-white/90 mb-4 sm:mb-6 tracking-wider">
+                    <motion.p initial={{ opacity: 0, y: 100 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.5,
+                            delay: 0.1,
+                            ease: [0.42, 0, 0.58, 1]
+                        }}
+                        viewport={{ once: true, amount: 0.3 }} className="text-sm font-medium text-slate-800 dark:text-white/90 mb-4 sm:mb-6 tracking-wider">
                         /PRICING PLAN
-                    </div>
+                    </motion.p>
                     <div className="">
-                        <h1 className="text-5xl lg:text-[52px]  font-bold tracking-tight leading-tight">
+                        <motion.h1 initial={{ opacity: 0, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{
+                                duration: 0.5,
+                                delay: 0.2,
+                                ease: [0.42, 0, 0.58, 1]
+                            }}
+                            viewport={{ once: true, amount: 0.3 }} className="text-5xl lg:text-[52px]  font-bold tracking-tight leading-tight">
                             Affordable
-                        </h1>
-                        <h2 className="text-5xl lg:text-[72px]  font-light italic leading-tight">
+                        </motion.h1>
+                        <motion.h2 initial={{ opacity: 0, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{
+                                duration: 0.5,
+                                delay: 0.2,
+                                ease: [0.42, 0, 0.58, 1]
+                            }}
+                            viewport={{ once: true, amount: 0.3 }} className="text-5xl lg:text-[72px]  font-light italic leading-tight">
                             pricing plan
-                        </h2>
+                        </motion.h2>
                     </div>
                 </div>
-                <div
+                <motion.div initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                        duration: 0.5,
+                        delay: 0.3,
+                        ease: [0.42, 0, 0.58, 1]
+                    }}
+                    viewport={{ once: true, amount: 0.3 }}
                     className={`flex items-center justify-center gap-5`}
                 >
                     <button
@@ -50,10 +79,10 @@ export default function HomePricingSection() {
                             (-20% off)
                         </span>
                     </button>
-                </div>
+                </motion.div>
             </div>
             <div className="px-8 sm:px-6 md:px-4 lg:px-0">
-                <ServicePricingCard service={servicesData["property-management"].pricing} />
+                <ServicePricingCard isAnimate={true} service={servicesData["property-management"].pricing} />
             </div>
         </section>
     )

@@ -6,6 +6,8 @@ import ServicePricingCard from "@/components/service-pricing-card";
 import { Button } from "@/components/ui/button";
 import { servicesData } from "@/lib/services";
 import HomePricingSection from "@/components/Home-pricing-section";
+import { Contact } from "lucide-react";
+import ContactSection from "@/components/contact-section";
 
 export default function Home() {
   return (
@@ -15,6 +17,7 @@ export default function Home() {
       <OurServices />
       <Works />
       <HomePricingSection />
+      <ContactSection />
     </main>
   );
 }

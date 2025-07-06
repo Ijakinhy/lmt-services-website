@@ -1,12 +1,22 @@
+"use client";
+
 import { type ServicePricingCard } from "@/lib/services";
 import { CheckCircle } from "lucide-react";
+import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 
-export default function ServicePricingCard({ service }: { service: ServicePricingCard[] }) {
+export default function ServicePricingCard({ service, isAnimate }: { service: ServicePricingCard[], isAnimate?: boolean }) {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {service.map((plan, index) => (
-                <div
+                <motion.div initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                        duration: 0.5,
+                        delay: isAnimate ? 0.1 * index : 0,
+                        ease: [0.42, 0, 0.58, 1]
+                    }}
+                    viewport={{ once: true, amount: 0.3 }}
                     key={index}
                     className={`bg-gray-900 rounded-2xl p-8 ${index % 2 === 1 ? "ring-2 ring-blue-500 scale-105" : ""}`}
                 >
@@ -26,8 +36,8 @@ export default function ServicePricingCard({ service }: { service: ServicePricin
                     >
                         Choose Plan
                     </Button>
-                </div>
+                </motion.div>
             ))}
-        </div>
+        </div >
     )
 }
