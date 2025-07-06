@@ -3,6 +3,7 @@
 import { ArrowUp, Facebook, Twitter } from "lucide-react";
 import { useEffect, useState } from "react";
 import { WhatsAppIcon } from "./icon";
+import { motion } from "framer-motion";
 
 export default function Footer() {
     const [showScrollButton, setShowScrollButton] = useState(false);
@@ -31,26 +32,67 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto px-6 py-12 relative">
                 <div className="grid grid-cols-1 md:grid-cols-2 justify-center gap-8 ml-5 md:ml-0">
                     <div>
-                        <h2 className="text-3xl font-bold mb-8 text-black dark:text-white">ONSITE</h2>
-                        <h3 className="text-xl font-bold mb-4">JOIN OUR NEWSLETTER</h3>
-                        <p className="text-gray-600 dark:text-gray-400 mb-8 text-sm leading-relaxed max-w-sm">
+                        <motion.h2 initial={{ opacity: 0, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{
+                                duration: 1.2,
+                                delay: 0.3,
+                                ease: [0.42, 0, 0.58, 1]
+                            }}
+                            viewport={{ once: true, amount: 0.3 }} className="text-3xl font-bold mb-8 text-black dark:text-white">ONSITE</motion.h2>
+                        <motion.h3 initial={{ opacity: 0, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{
+                                duration: 1,
+                                delay: 0.3,
+                                ease: [0.42, 0, 0.58, 1]
+                            }}
+                            viewport={{ once: true, amount: 0.3 }} className="text-xl font-bold mb-4">JOIN OUR NEWSLETTER</motion.h3>
+                        <motion.p initial={{ opacity: 0, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{
+                                duration: 1,
+                                delay: 0.3,
+                                ease: [0.42, 0, 0.58, 1]
+                            }}
+                            viewport={{ once: true, amount: 0.3 }} className="text-gray-600 dark:text-gray-400 mb-8 text-sm leading-relaxed max-w-sm">
                             Sign up to our mailing list below and be the first to know about new updates
-                        </p>
-                        <div className="flex max-w-md">
+                        </motion.p>
+                        <motion.div initial={{ opacity: 0, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{
+                                duration: 0.8,
+                                delay: 0.3,
+                                ease: [0.42, 0, 0.58, 1]
+                            }}
+                            viewport={{ once: true, amount: 0.3 }} className="flex md:max-w-md">
                             <input
                                 type="email"
                                 placeholder="Your email address..."
-                                className="flex-1 bg-white border border-gray-300 rounded-l-full px-6 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black dark:bg-gray-900 dark:border-0 dark:text-white dark:placeholder-gray-500 dark:focus:ring-white"
+                                className="flex-1 bg-white border border-gray-300 rounded-l-full  px-2 py-0 md:px-6 md:py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black dark:bg-gray-900 dark:border-0 dark:text-white dark:placeholder-gray-500 dark:focus:ring-white"
                             />
-                            <button className="bg-black text-white px-8 py-3 rounded-r-full font-bold hover:bg-gray-800 transition-colors dark:bg-white dark:text-black dark:hover:bg-gray-100">
+                            <button className="bg-black text-white px-5 py-2 md:px-8 md:py-3 rounded-r-full font-bold hover:bg-gray-800 transition-colors dark:bg-white dark:text-black dark:hover:bg-gray-100">
                                 SEND
                             </button>
-                        </div>
+                        </motion.div>
                     </div>
                     <div className="flex flex-col mt-10 md:mt-0 md:justify-end ml-0 md:ml-auto gap-10">
-                        {/* Discover Links */}
-                        <h3 className="text-sm font-bold mb-6 text-gray-500 dark:text-gray-300">DISCOVER</h3>
-                        <ul className="space-y-4 flex gap-4">
+                        <motion.h3 initial={{ opacity: 0, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{
+                                duration: 1.2,
+                                delay: 0.3,
+                                ease: [0.42, 0, 0.58, 1]
+                            }}
+                            viewport={{ once: true, amount: 0.3 }} className="text-sm font-bold mb-6 text-gray-500 dark:text-gray-300">DISCOVER</motion.h3>
+                        <motion.ul initial={{ opacity: 0, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{
+                                duration: 1,
+                                delay: 0.3,
+                                ease: [0.42, 0, 0.58, 1]
+                            }}
+                            viewport={{ once: true, amount: 0.3 }} className="space-y-4 flex gap-4">
                             <li>
                                 <a href="#" className="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white transition-colors text-sm">
                                     HOME
@@ -76,9 +118,16 @@ export default function Footer() {
                                     PRICING
                                 </a>
                             </li>
-                        </ul>
+                        </motion.ul>
 
-                        <div className="flex gap-5 space-y-3">
+                        <motion.div initial={{ opacity: 0, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{
+                                duration: 0.8,
+                                delay: 0.3,
+                                ease: [0.42, 0, 0.58, 1]
+                            }}
+                            viewport={{ once: true, amount: 0.3 }} className="flex gap-5 space-y-3">
                             <a
                                 href="#"
                                 className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 hover:text-black transition-colors dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
@@ -105,7 +154,7 @@ export default function Footer() {
                             >
                                 <Facebook size={18} />
                             </a>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
                 <button
@@ -120,7 +169,7 @@ export default function Footer() {
 
             <div className="border-t border-gray-200 dark:border-gray-800">
                 <div className="max-w-7xl mx-auto px-6 py-4">
-                    <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
+                    <div className="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0">
                         <div className="text-gray-500 text-xs">
                             © Copyright 2025 | Design & Developed By{" "}
                             <span className="font-semibold text-black hover:underline dark:text-white">
