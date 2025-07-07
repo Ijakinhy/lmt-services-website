@@ -8,6 +8,12 @@ export interface ServiceData {
     pricing: { plan: string; price: string; features: string[] }[]
 }
 
+export type ServicePricingCard = {
+    plan: string;
+    price: string;
+    features: string[];
+}
+
 
 
 export const servicesData: Record<string, ServiceData> = {
@@ -66,6 +72,7 @@ export const servicesData: Record<string, ServiceData> = {
                 price: "Custom",
                 features: ["Everything in Growth", "Custom Integrations", "Priority Support", "Strategic Consulting"],
             },
+
         ],
     },
     "social-ads": {
@@ -123,6 +130,7 @@ export const servicesData: Record<string, ServiceData> = {
                 price: "$6,500/month",
                 features: ["All Platforms", "Custom Audiences", "Daily Reports", "Dedicated Account Manager"],
             },
+
         ],
     },
 }
