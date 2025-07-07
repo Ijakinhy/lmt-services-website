@@ -1,13 +1,11 @@
 "use client"
 
-import Link from "next/link"
-import Image from "next/image"
-import { ArrowUpRightIcon, ChevronDown, Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useState } from "react"
-import { animate, hover, motion } from "framer-motion"
-import TextSlideUpDown from "./text-slide-up-down"
 import useScrollDirection from "@/app/hooks/useScrollDirection"
+import { ArrowUpRightIcon, Menu, X } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import { useState } from "react"
+import TextSlideUpDown from "./text-slide-up-down"
 import { ThemeToggle } from "./theme-toggle"
 
 const menuLinks = [
@@ -45,7 +43,7 @@ export default function NavBar() {
     return (
         <>
             <div
-                className={`fixed top-0 left-0 w-full h-24 py-6 px-4 md:px-6  lg:px-32 z-50 transition-colors duration-300 ${scrollY !== 0 ? "md:bg-[#03080d]" : "md:bg-transparent"
+                className={`fixed top-0 left-0 w-full h-24 py-6 px-4 md:px-6  lg:px-32 z-50 transition-colors duration-300 ${scrollY !== 0 ? "bg-[#03080d]" : "bg-transparent"
                     }`}
             >
                 <div className="container mx-auto flex items-center justify-between ">
@@ -75,6 +73,7 @@ export default function NavBar() {
             </div>
 
             {/* Mobile Menu Overlay */}
+
 
             <div
                 className={`fixed inset-0 bg-black transform transition-transform duration-300 ease-in-out z-50 md:hidden ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'
