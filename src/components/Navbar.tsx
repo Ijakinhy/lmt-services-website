@@ -58,7 +58,7 @@ export default function NavBar() {
                     </nav>                    <div className="flex items-center justify-center space-x-4">
 
                         <div className="bg-white text-[#03080d] py-2 px-9 text-[16px] rounded-full leading-[110%] font-medium tracking-tighter">
-                            <TextSlideUpDown href="/" className=" h-[24px]  flex items-center justify-center  " label="CONNECT" />
+                            <TextSlideUpDown href="/" className=" h-[24px]  flex items-center justify-center  " label="CONTACT US" />
 
                         </div>
                         <ThemeToggle />
@@ -92,7 +92,7 @@ export default function NavBar() {
                             />
                         </Link>
                         <div className="flex items-center space-x-4">
-                            <TextSlideUpDown href="/" className=" h-[24px]  flex items-center justify-center  " label="CONNECT" />
+                            <TextSlideUpDown href="/" className=" h-[24px]  flex items-center justify-center  " label="CONTACT US" />
 
                             <button onClick={toggleMenu} className="text-white p-2" aria-label="Close menu">
                                 <X className="h-6 w-6" />

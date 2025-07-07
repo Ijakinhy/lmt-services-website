@@ -65,7 +65,7 @@ export default function HeroSection() {
                         className="mt-20 bg-white text-[#03080d] font-medium tracking-tighter leading-tight rounded-full px-[36px] py-[15px] text-[16px]"
                     >
 
-                        <TextSlideUpDown href="/" label="LET'S CONNECT" className=" h-[24px]  flex items-center justify-center  " />
+                        <TextSlideUpDown href="/" label="CONTACT US" className=" h-[24px]  flex items-center justify-center  " />
                     </motion.div>
                 </div>
             </div>
