@@ -7,6 +7,8 @@ import Link from "next/link"
 import { useState } from "react"
 import TextSlideUpDown from "./text-slide-up-down"
 import { ThemeToggle } from "./theme-toggle"
+import { usePathname } from "next/navigation"
+import { div, i } from "framer-motion/client"
 
 const menuLinks = [
     {
@@ -33,7 +35,8 @@ const menuLinks = [
 
 export default function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-
+    const pathname = usePathname()
+    const isHomePage = pathname === "/"
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
     }
@@ -42,9 +45,12 @@ export default function NavBar() {
 
     return (
         <>
+
+            {/*on Home page */}
+
             <div
-                className={`fixed top-0 left-0 w-full h-24 py-6 px-4 md:px-6  lg:px-32 z-50 transition-colors duration-300 ${scrollY !== 0 ? "bg-[#03080d]" : "bg-transparent"
-                    }`}
+                className={` ${isHomePage ? `fixed top-0 left-0 ${scrollY !== 0 ? "bg-[#03080d]" : "bg-transparent"
+                    }` : "sticky top-0 bg-[#03080d] "} w-full h-24 py-6 px-4 md:px-6  lg:px-32 z-50 transition-colors duration-300 `}
             >
                 <div className="container mx-auto flex items-center justify-between ">
                     {/* Logo */}
@@ -71,6 +77,9 @@ export default function NavBar() {
                     </div>
                 </div>
             </div>
+
+
+
 
             {/* Mobile Menu Overlay */}
 
