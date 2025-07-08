@@ -121,3 +121,14 @@
   }
 }
 
+.font-figtree {
+  font-family: var(--font-figtree), sans-serif;
+}
+
+.font-caslon {
+  font-family: var(--font-libre-caslon), serif;
+}
+
+.font-inter {
+  font-family: var(--font-inter), sans-serif;
+}
