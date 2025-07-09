@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import AboutUs from "@/components/ui/about-us";
 import { Asterisk, Diamond, Hexagon, Plus, Sparkles, Star } from "lucide-react";
 import { Lobster } from "next/font/google";
+import ScrollZoomImage from "@/components/ScrollZoomImage";
 
 const coreValues = [
     {
@@ -55,11 +56,9 @@ const libreCaslon = Lobster({
 export default function AboutPage() {
 
     return (
-        // <div className="max-w-7xl mx-auto px-4 py-8">
         <section className="w-full  bg-white text-gray-800 dark:bg-black dark:text-gray-100 transition-colors duration-300">
             <div className="w-full flex items-center justify-center flex-col gap-10 mt-20">
                 <div className="max-w-5xl mx-auto h-[80vh] flex flex-col justify-center items-center text-center space-y-6">
-                    {/* Title */}
                     <motion.h2
                         initial={{ opacity: 0, y: 100 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -73,7 +72,6 @@ export default function AboutPage() {
                         Reimagining Service Excellence
                     </motion.h2>
 
-                    {/* Subtitle */}
                     <motion.h5 initial={{ opacity: 0, y: 100 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{
@@ -85,7 +83,6 @@ export default function AboutPage() {
                         Your Partner in Innovation, Quality, and Growth
                     </motion.h5>
 
-                    {/* Intro Paragraph */}
                     <motion.p initial={{ opacity: 0, y: 100 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{
@@ -101,9 +98,10 @@ export default function AboutPage() {
 
                     <div className="h-[1.5px] w-24 bg-gray-300 dark:bg-gray-700 mx-auto my-6"></div>
                 </div>
-                <div className="max-w-7xl w-full h-[30rem] relative rounded- overflow-hidden shadow-lg">
-                    <Image src="/about-image.jpeg" alt="Background gradient" fill priority className="object-cover" />
-                </div>
+            </div>
+            <div id="insight" className="min-w-full">
+                <ScrollZoomImage />
+
             </div>
             <div
                 className={`mt-24 max-w-7xl mx-auto `}
@@ -163,7 +161,6 @@ export default function AboutPage() {
                                 }}
                                 viewport={{ once: true, amount: 0.3 }}
                                 key={value.id} className="group">
-                                {/* Icon */}
                                 <div className="mb-6">
                                     <IconComponent
                                         size={32}
@@ -171,13 +168,10 @@ export default function AboutPage() {
                                     />
                                 </div>
 
-                                {/* Divider Line */}
                                 <div className="w-full h-px bg-gray-600 mb-6"></div>
 
-                                {/* Title */}
                                 <h3 className="text-xl sm:text-2xl font-bold mb-4 tracking-wide">{value.title}</h3>
 
-                                {/* Description */}
                                 <p className="text-gray-400 text-sm sm:text-base leading-relaxed">{value.description}</p>
                             </motion.div>
                         )
