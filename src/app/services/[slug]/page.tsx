@@ -18,20 +18,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
 
   return (
     <div className="bg-black text-white min-h-screen">
-      {/* Hero Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">{service.title}</h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{service.description}</p>
-          <Button
-            size="lg"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105"
-          >
-            Get Started Today
-          </Button>
-        </div>
-      </section>
-
       {/* Overview */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900">
         <div className="max-w-4xl mx-auto">
@@ -104,28 +90,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">Pricing Plans</h2>
           <ServicePricingCard service={service.pricing} />
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-          <p className="text-xl mb-8 text-blue-100">
-            Let's discuss how our {service.title.toLowerCase()} services can help grow your business.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold">
-              Schedule Consultation
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-full font-semibold bg-transparent"
-            >
-              View Case Studies
-            </Button>
-          </div>
         </div>
       </section>
     </div>
