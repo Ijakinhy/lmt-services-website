@@ -65,12 +65,12 @@ export default function HomePricingSection() {
                 >
                     <button
                         onClick={() => handlePlanChange("monthly")}
-                        className={`${changePlan === "monthly" ? " bg-gray-900 dark:bg-white/90 dark:text-[#03080d] text-white/90" : "dark:bg-transparent bg-white/90 text-[#03080d] dark:text-white/90"}  rounded-full  py-[0.8rem] lg:py-[1.1rem] px-[32px] lg:px-[45px] text-[18px] lg:text-[20px] font-bold cursor-pointer  `}
+                        className={`${changePlan === "monthly" ? " bg-gray-900 dark:bg-white/90 dark:text-[#03080d] text-white/90" : "dark:bg-transparent bg-white/90 text-[#03080d] dark:text-white/90"}  rounded-full  py-[0.5rem] lg:py-[1.1rem] px-[20px] md:px-[32px] lg:px-[45px] text-[14px] md:text-[18px] lg:text-[20px] font-bold cursor-pointer  `}
                     >
                         Monthly
                     </button>
                     <button
-                        className={`${changePlan === "annually" ? " bg-gray-900 dark:bg-white/90 dark:text-[#03080d] text-white/90" : "dark:bg-transparent bg-white/90 text-[#03080d] dark:text-white/90"}  rounded-full  py-[0.8rem] lg:py-[1.1rem] relative px-[32px] lg:px-[45px] text-[18px] lg:text-[20px] font-bold cursor-pointer `}
+                        className={`${changePlan === "annually" ? " bg-gray-900 dark:bg-white/90 dark:text-[#03080d] text-white/90" : "dark:bg-transparent bg-white/90 text-[#03080d] dark:text-white/90"}  rounded-full  py-[0.8rem] lg:5y-[1.1rem] relative px-[20px] md:px-[32px] lg:px-[45px] text-[14px] md:text-[18px] lg:text-[20px] font-bold cursor-pointer `}
                         onClick={() => handlePlanChange("annually")}
                     >
                         Annually

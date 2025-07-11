@@ -15,21 +15,17 @@ const menuLinks = [
         href: "/"
     },
     {
-        label: "ABOUT US",
-        href: "/about"
-    },
-    {
         label: "SERVICES",
         href: "/services"
+    },
+    {
+        label: "ABOUT US",
+        href: "/about"
     },
     {
         label: "BLOG",
         href: "https://lmt-blog.hashnode.dev/about-lmt-services"
     },
-    {
-        label: "PRICING",
-        href: "/pricing"
-    }
 ]
 
 export default function NavBar() {
@@ -62,8 +58,8 @@ export default function NavBar() {
                         {menuLinks.map(item => <TextSlideUpDown href={item.href} key={item.label} className="text-white text-[16px] font-light tracking-wide h-[24px]" label={item.label} />)}
                     </nav>                    <div className="flex items-center justify-center space-x-4">
 
-                        <div className="bg-white text-[#03080d] py-2 px-9 text-[16px] rounded-full leading-[110%] font-medium tracking-tighter">
-                            <TextSlideUpDown href="/" className=" h-[24px]  flex items-center justify-center  " label="CONTACT US" />
+                        <div className="bg-white hidden md:block text-[#03080d] py-2 px-9 text-[16px] rounded-full leading-[110%] font-medium tracking-tighter">
+                            <TextSlideUpDown href="/" className=" h-[24px] flex items-center justify-center  " label="CONTACT US" />
 
                         </div>
                         <ThemeToggle />
@@ -100,7 +96,7 @@ export default function NavBar() {
                             />
                         </Link>
                         <div className="flex items-center space-x-4">
-                            <TextSlideUpDown href="/" className=" h-[24px]  flex items-center justify-center  " label="CONTACT US" />
+
 
                             <button onClick={toggleMenu} className="text-white p-2" aria-label="Close menu">
                                 <X className="h-6 w-6" />
@@ -114,23 +110,8 @@ export default function NavBar() {
                             className="text-white text-xl mt-3.5 py-4 border-b border-gray-800  transition-colors flex items-center "
                             onClick={toggleMenu}
                         >
-                            <TextSlideUpDown href="/" className="text-white flex-1 bg-  h-[24px]" label="Home" />
+                            <TextSlideUpDown href="/" className="text-white flex-1 bg-  h-[24px]" label="HOME" />
 
-                            <ArrowUpRightIcon className="h-5 w-5 " />
-                        </div>
-                        <div
-                            className="text-white text-xl mt-3.5 py-4 border-b border-gray-800  transition-colors flex items-center justify-between"
-                            onClick={toggleMenu}
-                        >
-                            <TextSlideUpDown href="/about" className="text-white  h-[24px]" label="ABOUT US" />
-                            <ArrowUpRightIcon className="h-5 w-5 " />
-                        </div>
-
-                        <div
-                            className="text-white text-xl mt-3.5 py-4 border-b border-gray-800  transition-colors flex items-center justify-between"
-                            onClick={toggleMenu}
-                        >
-                            <TextSlideUpDown href="https://lmt-blog.hashnode.dev/about-lmt-services" className="text-white  h-[24px]" label="BLOG" />
                             <ArrowUpRightIcon className="h-5 w-5 " />
                         </div>
                         <div
@@ -144,10 +125,23 @@ export default function NavBar() {
                             className="text-white text-xl mt-3.5 py-4 border-b border-gray-800  transition-colors flex items-center justify-between"
                             onClick={toggleMenu}
                         >
-                            <TextSlideUpDown href="/" className="text-white  h-[24px]" label="PRICING" />
+                            <TextSlideUpDown href="/about" className="text-white  h-[24px]" label="ABOUT US" />
                             <ArrowUpRightIcon className="h-5 w-5 " />
                         </div>
-
+                        <div
+                            className="text-white text-xl mt-3.5 py-4 border-b border-gray-800  transition-colors flex items-center justify-between"
+                            onClick={toggleMenu}
+                        >
+                            <TextSlideUpDown href="https://lmt-blog.hashnode.dev/about-lmt-services" className="text-white  h-[24px]" label="BLOG" />
+                            <ArrowUpRightIcon className="h-5 w-5 " />
+                        </div>
+                        <div
+                            className="text-white text-xl mt-3.5 py-4 border-b border-gray-800  transition-colors flex items-center justify-between"
+                            onClick={toggleMenu}
+                        >
+                            <TextSlideUpDown href="/" className="text-white  h-[24px]" label="CONTACT US" />
+                            <ArrowUpRightIcon className="h-5 w-5 " />
+                        </div>
                     </nav>
                 </div>
             </div>

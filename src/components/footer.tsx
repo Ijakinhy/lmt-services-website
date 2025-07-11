@@ -29,7 +29,7 @@ export default function Footer() {
 
     return (
         <footer className="bg-gray-50 text-gray-800 dark:bg-black dark:text-white">
-            <div className="max-w-7xl mx-auto px-6 py-12 relative">
+            <div className="max-w-7xl mx-auto px-1 md:px-6 py-12 relative">
                 <div className="grid grid-cols-1 md:grid-cols-2 justify-center gap-8 ml-5 md:ml-0">
                     <div>
                         <motion.h2 initial={{ opacity: 0, y: 100 }}
@@ -65,7 +65,7 @@ export default function Footer() {
                                 delay: 0.3,
                                 ease: [0.42, 0, 0.58, 1]
                             }}
-                            viewport={{ once: true, amount: 0.3 }} className="flex md:max-w-md">
+                            viewport={{ once: true, amount: 0.3 }} className="flex max-w-xs md:max-w-md">
                             <input
                                 type="email"
                                 placeholder="Your email address..."
