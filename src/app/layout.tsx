@@ -1,7 +1,11 @@
 
-import { Geist, Geist_Mono, Figtree, Libre_Caslon_Text, Libre_Caslon_Display, Inter } from "next/font/google";
+import { Figtree, Inter, Libre_Caslon_Text } from "next/font/google";
 
+import ContactSection from "@/components/contact-section";
+import Footer from "@/components/footer";
 import NavBar from "@/components/Navbar";
+import type { Metadata } from "next";
+import type React from "react";
 import "./globals.css";
 
 
@@ -18,15 +22,11 @@ const libreCaslon = Libre_Caslon_Text({
   display: 'swap',
   variable: '--font-libre-caslon',
 });
-import type React from "react"
-import type { Metadata } from "next"
-import "./globals.css"
-import Footer from "@/components/footer";
-import ContactSection from "@/components/contact-section";
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://luckymotech.com"),
   title: "Luckymotech Services Limited | Innovative, Customer-Centric Solutions",
   description:
     "Luckymotech Services Limited is a trusted service provider founded in 2023, delivering high-quality, customer-first solutions with a focus on innovation, integrity, and excellence.",

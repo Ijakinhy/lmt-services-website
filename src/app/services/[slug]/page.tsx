@@ -4,15 +4,8 @@ import { CheckCircle, Target, TrendingUp, Zap } from "lucide-react"
 import { notFound } from "next/navigation"
 
 
-type PageProps = {
-  params: {
-    slug: string
-  }
-}
-
-
-export default function ServiceDetailPage({ params }: PageProps) {
-  const service = servicesData[params.slug]
+export default function ServiceDetailPage() {
+  const service = servicesData["property-management"]
 
   if (!service) {
     notFound()
@@ -98,6 +91,3 @@ export default function ServiceDetailPage({ params }: PageProps) {
   )
 }
 
-export async function generateStaticParams() {
-  return [{ slug: "property-management" }, { slug: "social-ads" }]
-}
