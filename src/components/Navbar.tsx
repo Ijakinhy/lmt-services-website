@@ -24,7 +24,7 @@ const menuLinks = [
     },
     {
         label: "BLOG",
-        href: "https://lmt-blog.hashnode.dev/about-lmt-services"
+        href: "https://lmt-blog.hashnode.dev"
     },
 ]
 
