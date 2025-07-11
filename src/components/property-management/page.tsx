@@ -1,6 +1,6 @@
-import Link from "next/link"
-import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { ArrowLeft } from "lucide-react"
+import Link from "next/link"
 
 export default function propertyManagementPage() {
   return (
@@ -23,7 +23,7 @@ export default function propertyManagementPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">PROPERTY MANAGEMENT</h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            	Improves property reputation and relationships with tenants and vendors, and Preventive maintenance reduces costly repairs and keeps tenants satisfied.
+            Improves property reputation and relationships with tenants and vendors, and Preventive maintenance reduces costly repairs and keeps tenants satisfied.
           </p>
           <Button
             size="lg"

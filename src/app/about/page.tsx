@@ -1,12 +1,11 @@
 "use client";
 
 
-import Image from "next/image";
-import { motion } from "framer-motion";
+import ScrollZoomImage from "@/components/ScrollZoomImage";
 import AboutUs from "@/components/ui/about-us";
+import { motion } from "framer-motion";
 import { Asterisk, Diamond, Hexagon, Plus, Sparkles, Star } from "lucide-react";
 import { Lobster } from "next/font/google";
-import ScrollZoomImage from "@/components/ScrollZoomImage";
 
 const coreValues = [
     {

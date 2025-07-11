@@ -26,13 +26,12 @@ interface ServiceCardProps {
 function ServiceCard({ service, isExpanded, onToggle, delay, isVisible }: ServiceCardProps) {
   return (
     <div
-       className={`bg-neutral-900 rounded-none border-none overflow-hidden transition-all duration-500 ease-out transform ${
-        isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-      } ${isExpanded ? "shadow-2xl scale-[1.01] sm:scale-[1.02]" : "hover:shadow-xl hover:scale-[1.005] sm:hover:scale-[1.01]"}`}
+      className={`bg-neutral-900 rounded-none border-none overflow-hidden transition-all duration-500 ease-out transform ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+        } ${isExpanded ? "shadow-2xl scale-[1.01] sm:scale-[1.02]" : "hover:shadow-xl hover:scale-[1.005] sm:hover:scale-[1.01]"}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       {/* Main Card Content - Darker Solid Styling */}
-         <div className="p-4 sm:p-6 lg:p-8">
+      <div className="p-4 sm:p-6 lg:p-8">
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1 min-w-0">
             <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-white mb-2 sm:mb-3 leading-tight break-words">
@@ -47,9 +46,9 @@ function ServiceCard({ service, isExpanded, onToggle, delay, isVisible }: Servic
             aria-label={isExpanded ? "Collapse service details" : "Expand service details"}
           >
             {isExpanded ? (
-                 <ChevronDown className="w-6 h-6 text-gray-400 group-hover:text-gray-300 group-active:text-gray-200 transition-colors duration-300" />
+              <ChevronDown className="w-6 h-6 text-gray-400 group-hover:text-gray-300 group-active:text-gray-200 transition-colors duration-300" />
             ) : (
-                   <ChevronRight className="w-6 h-6 text-gray-400 group-hover:text-gray-300 group-active:text-gray-200 transition-colors duration-300" />
+              <ChevronRight className="w-6 h-6 text-gray-400 group-hover:text-gray-300 group-active:text-gray-200 transition-colors duration-300" />
             )}
           </button>
         </div>
@@ -58,19 +57,18 @@ function ServiceCard({ service, isExpanded, onToggle, delay, isVisible }: Servic
       {/* Expanded Content - Mobile Optimized with Better Button Visibility */}
       {/* Expanded Content - Darker Styling */}
       <div
-        className={`overflow-hidden transition-all duration-500 ease-out ${
-           isExpanded ? "max-h-[700px] sm:max-h-[600px] opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`overflow-hidden transition-all duration-500 ease-out ${isExpanded ? "max-h-[700px] sm:max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
-           <div className="px-4 sm:px-6 lg:px-8 pb-6 sm:pb-6 lg:pb-8 border-t border-gray-800 dark:border-gray-700">
+        <div className="px-4 sm:px-6 lg:px-8 pb-6 sm:pb-6 lg:pb-8 border-t border-gray-800 dark:border-gray-700">
           <div className="pt-4 sm:pt-6 space-y-4 sm:space-y-6">
             {/* Full Description */}
             <div>
               <p className="text-gray-300 text-sm sm:text-base leading-relaxed">{service.fullDescription}</p>
             </div>
 
-              {/* Features & Benefits Grid - Mobile Responsive */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+            {/* Features & Benefits Grid - Mobile Responsive */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
               {/* Key Features */}
               <div>
                 <h4 className="text-white font-semibold mb-3 text-sm sm:text-base">Key Features:</h4>
@@ -78,7 +76,7 @@ function ServiceCard({ service, isExpanded, onToggle, delay, isVisible }: Servic
                   {service.features.map((feature, index) => (
                     <li key={index} className="text-gray-400 text-xs sm:text-sm flex items-start">
                       <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        <span className="leading-relaxed">{feature}</span>
+                      <span className="leading-relaxed">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -91,7 +89,7 @@ function ServiceCard({ service, isExpanded, onToggle, delay, isVisible }: Servic
                   {service.benefits.map((benefit, index) => (
                     <li key={index} className="text-gray-400 text-xs sm:text-sm flex items-start">
                       <span className="w-1.5 h-1.5 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                       <span className="leading-relaxed">{benefit}</span>
+                      <span className="leading-relaxed">{benefit}</span>
                     </li>
                   ))}
                 </ul>
@@ -102,12 +100,12 @@ function ServiceCard({ service, isExpanded, onToggle, delay, isVisible }: Servic
             <div className="pt-4 sm:pt-4 flex justify-center sm:justify-start">
               <Button
                 asChild
-                     size="lg"
-                 className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-8 py-4 sm:px-8 sm:py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 active:scale-95 touch-manipulation text-base sm:text-base shadow-xl hover:shadow-2xl border-2 border-blue-500 hover:border-blue-400"
+                size="lg"
+                className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-8 py-4 sm:px-8 sm:py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 active:scale-95 touch-manipulation text-base sm:text-base shadow-xl hover:shadow-2xl border-2 border-blue-500 hover:border-blue-400"
               >
-                   <Link href={`/services/${service.slug}`} className="flex items-center justify-center">
+                <Link href={`/services/${service.slug}`} className="flex items-center justify-center">
                   <span className="mr-2">Click for more details</span>
-                       <ArrowUpRight className="w-5 h-5 flex-shrink-0" />
+                  <ArrowUpRight className="w-5 h-5 flex-shrink-0" />
                 </Link>
               </Button>
             </div>
@@ -165,7 +163,7 @@ export default function ServicesPage() {
         "Installation of outlets, switches, panels, lighting systems",
         "Electrical Repairs & Maintenance",
         "Troubleshooting faulty systems",
-      
+
 
       ],
       benefits: [
@@ -254,25 +252,24 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-black text-white relative">
 
-       {/* Hero Section - Increased Mobile Padding */}
+      {/* Hero Section - Increased Mobile Padding */}
       <section className="pt-24 sm:pt-28 md:pt-32 lg:pt-36 xl:pt-44 pb-16 sm:pb-20 lg:pb-24 xl:pb-28 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div
-            className={`transform transition-all duration-1000 ease-out ${
-              isLoaded ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
-            }`}
+            className={`transform transition-all duration-1000 ease-out ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
+              }`}
           >
-             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
               CREATIVE DESIGN
             </h1>
-                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light italic text-gray-300 mb-6 sm:mb-8">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light italic text-gray-300 mb-6 sm:mb-8">
               solution for brands
             </p>
           </div>
         </div>
       </section>
 
-       <section className="pb-12 sm:pb-16 lg:pb-20 xl:pb-24 px-4 sm:px-6 lg:px-8">
+      <section className="pb-12 sm:pb-16 lg:pb-20 xl:pb-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto space-y-4 sm:space-y-6 lg:space-y-8">
           {services.map((service, index) => (
             <ServiceCard

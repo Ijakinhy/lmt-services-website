@@ -1,8 +1,8 @@
 "use client"
-import { useEffect, useRef, useState } from "react"
-import Image from "next/image"
+import { Button } from "@/components/ui/button";
 import lmtPhoto from "@/images/lmtPhoto.jpg";
-import { Button } from "@/components/ui/button"
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 // Custom hook for counting animation
 function useCountAnimation(endValue: string, isVisible: boolean, duration = 2000) {

@@ -1,11 +1,9 @@
 "use client"
 
 
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
-import { Dancing_Script, Kanit, Libre_Caslon_Text, Lobster, Yuji_Mai } from "next/font/google";
-import Link from "next/link";
+import { motion } from "framer-motion";
+import { Lobster } from "next/font/google";
+import Image from "next/image";
 import TextSlideUpDown from "./text-slide-up-down";
 
 const libreCaslon = Lobster({

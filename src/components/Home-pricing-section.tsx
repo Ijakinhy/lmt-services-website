@@ -1,10 +1,9 @@
 "use client";
 
 import { servicesData } from "@/lib/services";
-import { Button } from "./ui/button";
-import ServicePricingCard from "./service-pricing-card";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import ServicePricingCard from "./service-pricing-card";
 
 
 export default function HomePricingSection() {

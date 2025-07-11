@@ -1,9 +1,7 @@
-import { notFound } from "next/navigation"
-import Link from "next/link"
-import { ArrowLeft, CheckCircle, Target, TrendingUp, Zap } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import ServicePricingCard from "@/components/service-pricing-card"
 import { servicesData } from "@/lib/services"
+import { CheckCircle, Target, TrendingUp, Zap } from "lucide-react"
+import { notFound } from "next/navigation"
 
 
 

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function useScrollDirection() {
     const [scrollY, setScrollY] = useState(0);

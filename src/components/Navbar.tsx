@@ -4,11 +4,10 @@ import useScrollDirection from "@/app/hooks/useScrollDirection"
 import { ArrowUpRightIcon, Menu, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { useState } from "react"
 import TextSlideUpDown from "./text-slide-up-down"
 import { ThemeToggle } from "./theme-toggle"
-import { usePathname } from "next/navigation"
-import { div, i } from "framer-motion/client"
 
 const menuLinks = [
     {
