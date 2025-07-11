@@ -25,7 +25,7 @@ const menuLinks = [
     },
     {
         label: "BLOG",
-        href: "/blog"
+        href: "https://lmt-blog.hashnode.dev/about-lmt-services"
     },
     {
         label: "PRICING",
@@ -131,7 +131,7 @@ export default function NavBar() {
                             className="text-white text-xl mt-3.5 py-4 border-b border-gray-800  transition-colors flex items-center justify-between"
                             onClick={toggleMenu}
                         >
-                            <TextSlideUpDown href="/" className="text-white  h-[24px]" label="BLOG" />
+                            <TextSlideUpDown href="https://lmt-blog.hashnode.dev/about-lmt-services" className="text-white  h-[24px]" label="BLOG" />
                             <ArrowUpRightIcon className="h-5 w-5 " />
                         </div>
                         <div
