@@ -137,7 +137,7 @@ export default function NavBar() {
                             className="text-white text-xl mt-3.5 py-4 border-b border-gray-800  transition-colors flex items-center justify-between"
                             onClick={toggleMenu}
                         >
-                            <TextSlideUpDown href="/" className="text-white  h-[24px]" label="SERVICES" />
+                            <TextSlideUpDown href="/services" className="text-white  h-[24px]" label="SERVICES" />
                             <ArrowUpRightIcon className="h-5 w-5 " />
                         </div>
                         <div
