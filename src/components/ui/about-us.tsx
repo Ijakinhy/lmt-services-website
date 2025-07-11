@@ -1,4 +1,6 @@
 "use client"
+
+
 import { Button } from "@/components/ui/button";
 import lmtPhoto from "@/images/lmtPhoto.jpg";
 import Image from "next/image";
@@ -114,13 +116,14 @@ export default function AboutUs() {
       },
     )
 
-    if (statsRef.current) {
-      observer.observe(statsRef.current)
+    const currentRef = statsRef.current
+    if (currentRef) {
+      observer.observe(currentRef)
     }
 
     return () => {
-      if (statsRef.current) {
-        observer.unobserve(statsRef.current)
+      if (currentRef) {
+        observer.unobserve(currentRef)
       }
     }
   }, [])

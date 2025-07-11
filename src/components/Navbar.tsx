@@ -40,7 +40,7 @@ export default function NavBar() {
         setIsMenuOpen(!isMenuOpen)
     }
 
-    const { scrollDirection, scrollY } = useScrollDirection()
+    const { scrollY } = useScrollDirection()
 
     return (
         <>

@@ -4,10 +4,14 @@ import { CheckCircle, Target, TrendingUp, Zap } from "lucide-react"
 import { notFound } from "next/navigation"
 
 
+type PageProps = {
+  params: {
+    slug: string
+  }
+}
 
 
-
-export default function ServiceDetailPage({ params }: { params: { slug: string } }) {
+export default function ServiceDetailPage({ params }: PageProps) {
   const service = servicesData[params.slug]
 
   if (!service) {
@@ -32,7 +36,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
             <div>
               <h3 className="text-2xl font-bold mb-8 flex items-center">
                 <Zap className="w-6 h-6 mr-3 text-blue-400" />
-                What's Included
+                {" What's Included"}
               </h3>
               <ul className="space-y-4">
                 {service.features.map((feature, index) => (
