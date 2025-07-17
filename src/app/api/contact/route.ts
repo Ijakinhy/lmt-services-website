@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 
-const resend = new Resend(process.env.VITE_RESEND_API_KEY)
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 
 export async function POST(req: Request) {
@@ -13,7 +13,7 @@ export async function POST(req: Request) {
 
         await resend.emails.send({
             from: 'Contact Form <onboarding@resend.dev>', // or your verified domain later
-            to: process.env.VITE_COMPANY_EMAIL!,
+            to: process.env.COMPANY_EMAIL!,
             subject: 'New Contact Form Submission',
             text: `
                 New message from contact form:
