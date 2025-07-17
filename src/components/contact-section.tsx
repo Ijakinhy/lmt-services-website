@@ -63,7 +63,7 @@ export default function ContactSection() {
                     className="mt-20 bg-white text-[#03080d] font-medium tracking-tighter leading-tight rounded-full px-[36px] py-[15px] text-[16px]  max-w-[174px] mx-auto"
                 >
 
-                    <TextSlideUpDown href="/" label="Send Email" className=" h-[24px]  flex items-center justify-center  " />
+                    <TextSlideUpDown href="/contact" label="Send Email" className=" h-[24px]  flex items-center justify-center  " />
                 </motion.div>
             </div>
         </section>

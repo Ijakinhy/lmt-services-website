@@ -59,7 +59,7 @@ export default function NavBar() {
                     </nav>                    <div className="flex items-center justify-center space-x-4">
 
                         <div className="bg-white hidden md:block text-[#03080d] py-2 px-9 text-[16px] rounded-full leading-[110%] font-medium tracking-tighter">
-                            <TextSlideUpDown href="/" className=" h-[24px] flex items-center justify-center  " label="CONTACT US" />
+                            <TextSlideUpDown href="/contact" className=" h-[24px] flex items-center justify-center  " label="CONTACT US" />
 
                         </div>
                         <ThemeToggle />
@@ -139,7 +139,7 @@ export default function NavBar() {
                             className="text-white text-xl mt-3.5 py-4 border-b border-gray-800  transition-colors flex items-center justify-between"
                             onClick={toggleMenu}
                         >
-                            <TextSlideUpDown href="/" className="text-white  h-[24px]" label="CONTACT US" />
+                            <TextSlideUpDown href="/contact" className="text-white  h-[24px]" label="CONTACT US" />
                             <ArrowUpRightIcon className="h-5 w-5 " />
                         </div>
                     </nav>

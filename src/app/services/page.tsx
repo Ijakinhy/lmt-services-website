@@ -103,8 +103,8 @@ function ServiceCard({ service, isExpanded, onToggle, delay, isVisible }: Servic
                 size="lg"
                 className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-8 py-4 sm:px-8 sm:py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 active:scale-95 touch-manipulation text-base sm:text-base shadow-xl hover:shadow-2xl border-2 border-blue-500 hover:border-blue-400"
               >
-                <Link href={`/services/${service.slug}`} className="flex items-center justify-center">
-                  <span className="mr-2">Click for more details</span>
+                <Link href={`/contact`} className="flex items-center justify-center">
+                  <span className="mr-2">Contact us for more details</span>
                   <ArrowUpRight className="w-5 h-5 flex-shrink-0" />
                 </Link>
               </Button>
@@ -270,7 +270,7 @@ export default function ServicesPage() {
       </section>
 
       <section className="pb-12 sm:pb-16 lg:pb-20 xl:pb-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto space-y-4 sm:space-y-6 lg:space-y-8">
+        <div className="max-w-6xl mx-auto space-y-4 sm:space-y-6 lg:space-y-8">
           {services.map((service, index) => (
             <ServiceCard
               key={service.id}
