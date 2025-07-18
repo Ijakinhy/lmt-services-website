@@ -3,7 +3,6 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 
-const resend = new Resend(process.env.RESEND_API_KEY)
 
 
 
@@ -11,9 +10,13 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 export async function POST(req: Request) {
     const body = await req.json()
     const { firstName, lastName, companyName, visitorEmail, phoneNumber, message }: ContactFormData = body
-    if (!process.env.RESEND_API_KEY || !process.env.COMPANY_EMAIL) {
-        return NextResponse.json({ message: "Missing env variables" }, { status: 500 });
+    const resendApiKey = process.env.RESEND_API_KEY
+
+    if (!resendApiKey) {
+        console.error("Missing RESEND_API_KEY environment variable");
+        return NextResponse.json({ error: "Server configuration error" }, { status: 500 });
     }
+    const resend = new Resend(resendApiKey)
     try {
 
         await resend.emails.send({
