@@ -11,6 +11,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Card, CardContent } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Facebook, Linkedin, Instagram, Twitter, MapPin, Mail, Phone } from "lucide-react"
+import { ContactFormData } from "@/lib/utils"
 
 export default function ContactPage() {
     const [formData, setFormData] = useState({
@@ -30,9 +31,33 @@ export default function ContactPage() {
         }))
     }
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
-        console.log("Form submitted:", formData)
+        const form = new FormData(e.target as HTMLFormElement)
+        const data = Object.fromEntries(form.entries()) as ContactFormData
+        // const data: ContactFormData = {
+        //     firstName: String(form.get("firstName") ?? ""),
+        //     lastName: String(form.get("lastName") ?? ""),
+        //     visitorEmail: String(form.get("visitorEmail") ?? ""),
+        //     phoneNumber: String(form.get("phoneNumber") ?? ""),
+        //     message: String(form.get("message") ?? ""),
+        //     companyName: String(form.get("companyName") ?? ""),
+        // }
+        try {
+            await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+
+                body: JSON.stringify(data)
+            })
+        } catch (error) {
+            console.log(error);
+
+
+        }
+
     }
 
     return (
@@ -115,6 +140,7 @@ export default function ContactPage() {
                                     </Label>
                                     <Input
                                         id="firstName"
+                                        name="firstName"
                                         placeholder="First name"
                                         value={formData.firstName}
                                         onChange={(e) => handleInputChange("firstName", e.target.value)}
@@ -127,6 +153,7 @@ export default function ContactPage() {
                                     </Label>
                                     <Input
                                         id="lastName"
+                                        name="lastName"
                                         placeholder="Last name"
                                         value={formData.lastName}
                                         onChange={(e) => handleInputChange("lastName", e.target.value)}
@@ -141,6 +168,7 @@ export default function ContactPage() {
                                 </Label>
                                 <Input
                                     id="companyName"
+                                    name="companyName"
                                     placeholder="Company name"
                                     value={formData.companyName}
                                     onChange={(e) => handleInputChange("companyName", e.target.value)}
@@ -154,6 +182,7 @@ export default function ContactPage() {
                                 </Label>
                                 <Input
                                     id="email"
+                                    name="visitorEmail"
                                     type="email"
                                     placeholder="you@company.com or youremail@.com"
                                     value={formData.email}
@@ -186,6 +215,7 @@ export default function ContactPage() {
                                     </Select>
                                     <Input
                                         id="phoneNumber"
+                                        name="phoneNumber"
                                         placeholder="123 456 7890"
                                         value={formData.phoneNumber}
                                         onChange={(e) => handleInputChange("phoneNumber", e.target.value)}
@@ -200,6 +230,7 @@ export default function ContactPage() {
                                 </Label>
                                 <Textarea
                                     id="message"
+                                    name="message"
                                     placeholder="Tell us what we can help you with"
                                     value={formData.message}
                                     onChange={(e) => handleInputChange("message", e.target.value)}
