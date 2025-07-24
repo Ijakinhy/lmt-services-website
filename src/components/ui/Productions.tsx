@@ -2,48 +2,9 @@
 
 
 import { Button } from "@/components/ui/button";
-import lmtPhoto from "@/images/lmtPhoto.jpg";
+import prodPhoto from "@/images/productions.png";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-
-
-
-
-
-function useDynamicPercentage(baseValue: string, isVisible: boolean) {
-  const [value, setValue] = useState(baseValue)
-
-  useEffect(() => {
-    if (!isVisible || !baseValue.includes("%")) return
-
-    const base = parseFloat(baseValue)
-    let current = base
-    let direction = "up"
-
-    const interval = setInterval(() => {
-      if (direction === "up") {
-        current += 3
-        direction = "down"
-      } else {
-        current -= 1
-        direction = "up"
-      }
-      setValue(`${Math.max(0, Math.floor(current))}%`)
-    }, 8000)
-
-    return () => clearInterval(interval)
-  }, [baseValue, isVisible])
-
-  return value
-}
-
-
-
-
-
-
-
-
 
 // Custom hook for counting animation
 function useCountAnimation(endValue: string, isVisible: boolean, duration = 2000) {
@@ -94,49 +55,10 @@ function useCountAnimation(endValue: string, isVisible: boolean, duration = 2000
 }
 
 
-// Individual statistic component with counter
-function AnimatedStatistic({
-  value,
-  label,
-  isVisible,
-  delay,
-}: {
-  value: string
-  label: string
-  isVisible: boolean
-  delay: string
-}) {
-  const [hasMounted, setHasMounted] = useState(false)
-
-  useEffect(() => {
-    setHasMounted(true)
-  }, [])
-
-  const isPercentage = value.includes("%")
-const animatedValue = isPercentage
-  ? useDynamicPercentage(value, isVisible && hasMounted)
-  : useCountAnimation(value, isVisible && hasMounted, 2000)
 
 
-  return (
-    <div
-      className={`text-center lg:text-left transform transition-all duration-700 ease-out ${isVisible ? `translate-y-0 opacity-100 ${delay}` : "translate-y-8 opacity-0"
-        }`}
-    >
-      <div className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-2 transition-colors duration-300 hover:text-blue-400 cursor-default tabular-nums">
-        <span suppressHydrationWarning>
-          {hasMounted ? animatedValue : "0"}
-        </span>
-      </div>
-      <p className="text-gray-500 dark:text-gray-400 text-xs sm:text-sm leading-relaxed">
-        {label}
-      </p>
-    </div>
-  )
-}
 
-
-export default function AboutUs() {
+export default function Production() {
   const [isVisible, setIsVisible] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
   const statsRef = useRef<HTMLDivElement>(null)
@@ -172,11 +94,13 @@ export default function AboutUs() {
   }, [])
 
   const statistics = [
-    { value: "92%", label: "SATISFACTION", delay: "delay-0" },
-    { value: "280%", label: "PRODUCTION", delay: "delay-100" },
-    { value: "42M", label: "DELAY", delay: "delay-200" },
-    { value: "94%", label: "PERFORMANCE", delay: "delay-300" },
+    { value: "92%", label: "Talentank reach per week", delay: "delay-0" },
+    
+    { value: "280%", label: "Talentank reach per week", delay: "delay-100" },
+    { value: "42M", label: "Talentank reach per week", delay: "delay-200" },
+    { value: "94%", label: "Talentank reach per week", delay: "delay-300" },
   ]
+  
 
   return (
     <section className="bg-white dark:bg-black text-gray-900 dark:text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
@@ -189,21 +113,8 @@ export default function AboutUs() {
               }`}
           >
             <div className="space-y-2">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">LUCKYMOTECH SERVICES LIMITED</h1>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light italic">solution based</h2>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">PRODUCTIONS</h1>
             </div>
-
-            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-md leading-relaxed">
-              We are an award winning Agency with top notch services and actions. We have our clients living worldwide.
-            </p>
-
-            <Button
-              variant="secondary"
-              size="lg"
-              className="bg-gray-900 dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-100 active:bg-gray-700 dark:active:bg-gray-200 rounded-full px-6 sm:px-8 py-2 sm:py-3 font-semibold text-sm sm:text-base transition-all duration-200 hover:scale-105 active:scale-95 transform touch-manipulation"
-            >
-              LEARN ABOUT US
-            </Button>
           </div>
 
           {/* Right image */}
@@ -213,7 +124,7 @@ export default function AboutUs() {
           >
             <div className="relative h-64 sm:h-80 md:h-96 w-full rounded-xl sm:rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105 active:scale-100 transform will-change-transform shadow-lg dark:shadow-2xl">
               <Image
-                src={lmtPhoto}
+                src={prodPhoto}
                 alt="Professional working on laptop"
                 fill
                 className="object-cover"
@@ -223,19 +134,18 @@ export default function AboutUs() {
           </div>
         </div>
 
-        {/* Statistics section */}
-        <div ref={statsRef} className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {statistics.map((stat, index) => (
-            <AnimatedStatistic
-              key={index}
-              value={stat.value}
-              label={stat.label}
-              isVisible={isVisible}
-              delay={stat.delay}
-            />
-          ))}
-        </div>
+       
       </div>
+      {/* Description paragraph */}
+<div className="mt-16 flex justify-center">
+  <p className="text-center text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl">
+    At Talentank, our production strategy is focused on high-impact storytelling and data-driven content creation. 
+    Every piece we produce—whether video, design, or interactive media—is crafted to connect deeply with audiences 
+    and drive measurable engagement. Backed by creative talent and robust distribution, our production arm ensures 
+    your message resonates across platforms while amplifying your brand’s voice at scale.
+  </p>
+</div>
+
     </section>
   )
 }

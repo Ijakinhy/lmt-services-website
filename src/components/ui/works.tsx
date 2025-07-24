@@ -7,7 +7,7 @@ import propertyManagementImage from "@/images/property-management.jpg";
 import fumigationImage from "@/images/fumigation.png"
 import electricalImage from "@/images/electrical-services.png"
 import projectImage from "@/images/project-management.png"
-import toiletImage from "@/images/toilet-infection.png"
+import MushroomPro from "@/images/mushroom.jpg"
 import Link from "next/link";
 import { ChevronLeft, ChevronRight, X, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -244,12 +244,12 @@ export default function Works() {
       caseStudyUrl: "/case-studies/helon-branding",
     },
     {
-      id: "toilet-infection-control",
-      title: "TOILET INFECTION CONTROL",
-      category: "Toilet Infection Control",
-      image:toiletImage,
+      id: "mushroom-production",
+      title: "MUSHROOM PRODUCTION",
+      category: "Mushroom Production",
+      image:MushroomPro,
       description:
-        "Modern web application development with focus on user experience and performance optimization, resulting in 40% faster load times.",
+        "Mushroom production is an essencial areas of agricultural practice that is not common this verious areas of vegitaion.",
       technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
       liveUrl: "https://example.com",
       caseStudyUrl: "/case-studies/techflow-web",

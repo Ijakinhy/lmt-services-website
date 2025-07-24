@@ -114,10 +114,10 @@ export default function OurServices() {
       slug: "industrial/house-clean_up",
     },
     {
-      title: "TOILET INFECTION CONTROL",
+      title: "MUSHROOM PRODUCTION",
       description:
         "We offer a comprehensive range of toilet infection control for houses, offices, environment well fairs and other areas of activity",
-      slug: "toilet-infection-control",
+      slug: "mushroom-production",
     },
     {
       title: "GENERAL CONTRACT",
