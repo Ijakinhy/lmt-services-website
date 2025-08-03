@@ -7,6 +7,7 @@ import NavBar from "@/components/Navbar";
 import type { Metadata } from "next";
 import type React from "react";
 import "./globals.css";
+import Team from "@/components/Team";
 
 
 const figtree = Figtree({
@@ -75,6 +76,9 @@ export default function RootLayout({
           <main className="flex-grow">
             {children}
           </main>
+          <section id="team" className=" max-w-full [@media(min-width:1024px)_and_(max-width:1400px)]:max-w-full lg:max-w-[80vw]  mx-auto mb-32  px-4    ">
+            <Team />
+          </section>
           <ContactSection />
           <Footer />
         </div>
