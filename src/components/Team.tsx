@@ -6,6 +6,8 @@ import teamMember2 from "/public/teamMember-2.webp";
 import teamMember3 from "/public/teamMember-3.webp";
 import teamMember4 from "/public/teamMember-4.webp";
 import Image, { StaticImageData } from "next/image";
+import { Button } from "./ui/button";
+import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 
 type Team = {
   profile: StaticImageData;
@@ -14,6 +16,10 @@ type Team = {
 };
 
 const team: Team[] = [
+  { profile: teamMember1, name: "Mat Zalman", role: "CEO" },
+  { profile: teamMember2, name: "Megan Zalman", role: "Marketing Director" },
+  { profile: teamMember3, name: "Mat Zalman", role: "Senior Backend Developer" },
+  { profile: teamMember4, name: "Rukundo Zalman", role: "Senior Developer" },
   { profile: teamMember1, name: "Mat Zalman", role: "CEO" },
   { profile: teamMember2, name: "Megan Zalman", role: "Marketing Director" },
   { profile: teamMember3, name: "Mat Zalman", role: "Senior Backend Developer" },
@@ -29,7 +35,7 @@ const TeamMemberCard = ({ member, isMobile }: { member: Team; isMobile: boolean 
         width={400}
         height={400}
         alt={`${member.name} - ${member.role}`}
-        className={`w-full h-full rounded-[${isMobile ? "40px" : "40px"}]`}
+        className={`w-full h-full hover:grayscale transition-all ease-in-out duration-500 rounded-[${isMobile ? "40px" : "40px"}]`}
       />
     </div>
     <div className="text-center mt-5">
@@ -74,9 +80,21 @@ const Team = () => {
     const walk = (x - startX) * 2;
     scrollRef.current.scrollLeft = scrollLeft - walk;
   };
+  const desktopScrollRef = useRef<HTMLDivElement | null>(null);
+
 
   const handleTouchEnd = () => setIsDragging(false);
+  const scrollLeftDesktop = () => {
+    if (desktopScrollRef.current) {
+      desktopScrollRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+    }
+  };
 
+  const scrollRightDesktop = () => {
+    if (desktopScrollRef.current) {
+      desktopScrollRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+    }
+  };
 
   return (
     <>
@@ -84,24 +102,36 @@ const Team = () => {
         Meet some of our 80+ team members
       </h2>
 
-      {/* Desktop View */}
-      <div className="hidden lg:flex mt-24 items-start space-x-7" role="list">
-        {team.map((member, i) => (
-          <TeamMemberCard key={i} member={member} isMobile={false} />
-        ))}
+      <div className="hidden lg:flex mt-24 items-center space-x-4">
+        <Button onClick={scrollLeftDesktop} variant="outline">
+          <ArrowLeftIcon className="h-4 w-4" />
+        </Button>
+
+        <div
+          ref={desktopScrollRef}
+          className="flex overflow-x-auto space-x-7 scrollbar-hide snap-x snap-mandatory no-scrollbar"
+          role="list"
+        >
+          {team.map((member, i) => (
+            <TeamMemberCard key={i} member={member} isMobile={false} />
+          ))}
+        </div>
+
+        <Button onClick={scrollRightDesktop} variant="outline">
+          <ArrowRightIcon className="h-4 w-4" />
+        </Button>
       </div>
 
-      {/* Mobile & Tablet View */}
-      <div className="block lg:hidden mt-16 relative">
-        {/* LEFT Blur */}
-        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-12 bg-gradient-to-r from-white/80 dark:from-[#0a0d31]/80 to-transparent" />
 
-        {/* RIGHT Blur */}
-        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-12 bg-gradient-to-l from-white/80 dark:from-[#0a0d31]/80 to-transparent" />
+      <div className="block lg:hidden mt-16 relative">
+        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-10 bg-gradient-to-r from-[rgba(255,255,255,0.9)] dark:from-[rgba(15,23,42,0.9)] to-transparent backdrop-blur-sm" />
+
+        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-10 bg-gradient-to-l from-[rgba(255,255,255,0.9)] dark:from-[rgba(15,23,42,0.9)] to-transparent backdrop-blur-sm" />
+
 
         <div
           ref={scrollRef}
-          className="flex overflow-x-auto snap-x snap-mandatory space-x-4 pr-8 cursor-grab active:cursor-grabbing no-scrollbar"
+          className="flex overflow-x-auto gap-10 snap-x snap-mandatory space-x-4 pr-8 cursor-grab active:cursor-grabbing no-scrollbar"
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
