@@ -78,12 +78,18 @@ export default function OurServices() {
 
   const services = [
     {
+      title: "PROJECT MANAGEMENT",
+      description:
+        "We offer a comprehensive range of managing projects as well as contracts.",
+      slug: "project-management",
+    },
+       {
       title: "PROPERTY MANAGEMENT",
       description:
         "We offer a comprehensive range of property management services, including property monitoring, property maintenance.",
       slug: "property-management",
     },
-    {
+      {
       title: "ELECTRICAL SERVICES",
       description:
         "We offer a comprehensive range of electrical services, home installation, correcting wire bridge.",
@@ -95,12 +101,7 @@ export default function OurServices() {
         "We offer a comprehensive range of fumigation, home fumigation, office fumigation.",
       slug: "fumigation",
     },
-    {
-      title: "PROJECT MANAGEMENT",
-      description:
-        "We offer a comprehensive range of managing projects as well as contracts.",
-      slug: "project-management",
-    },
+    
     {
       title: "SALES REPRESENTATIVE",
       description:
@@ -125,10 +126,25 @@ export default function OurServices() {
         "We offer a comprehensive range of general contract for other areas of activity",
       slug: "general-contract",
     },
+    {
+      title: "FACILITY MANAGEMENT",
+      description:
+        "We offer a comprehensive range of general contract for other areas of activity",
+      slug: "facility-management",
+    },
+    {
+      title: "LABOUR SUPPLY",
+      description:
+        "We offer a comprehensive range of general contract for other areas of activity",
+      slug: "labour-supply",
+    },
   ];
 
   return (
-    <section className="bg-gray-50 dark:bg-black text-gray-900 dark:text-white py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
+       <section
+      id="services-section"
+      className="bg-gray-50 dark:bg-black text-gray-900 dark:text-white py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start gap-6 mb-12">

@@ -130,6 +130,29 @@ export default function ServicesPage() {
 
   const services: Service[] = [
     {
+      id: "project-management",
+      title: "PROJECT MANAGEMENT",
+      shortDescription:
+        "We offer a comprehensive range of managing projects as well as contracts.",
+      fullDescription:
+        "Comprehensive project management handlinga and structuring for better performance",
+      features: [
+        "Project Planning",
+        "Task Management",
+        "Resource Management",
+        "Time Management",
+        "Communication Management",
+      ],
+      benefits: [
+        "Improved Efficiency",
+        "Clear focus and Objectives",
+        "Better Resource Utilization",
+        "Effective Risk Management",
+        "Cost and Time Control",
+      ],
+      slug: "project-management",
+    },
+    {
       id: "property-management",
       title: "PROPERTY MANAGEMENT",
       shortDescription:
@@ -220,9 +243,10 @@ export default function ServicesPage() {
       ],
       slug: "industrial/house-clean_up",
     },
+    
     {
-      id: "project-management",
-      title: "PROJECT MANAGEMENT",
+      id: "Labour-supply",
+      title: "LABOUR SUPPLY",
       shortDescription:
         "We offer a comprehensive range of managing projects as well as contracts.",
       fullDescription:
@@ -241,7 +265,30 @@ export default function ServicesPage() {
         "Effective Risk Management",
         "Cost and Time Control",
       ],
-      slug: "project-management",
+      slug: "labour-supply",
+    },
+    {
+      id: "facility-management",
+      title: "FACILITY MANAGEMENT",
+      shortDescription:
+        "We offer a comprehensive range of managing projects as well as contracts.",
+      fullDescription:
+        "Comprehensive project management handlinga and structuring for better performance",
+      features: [
+        "Project Planning",
+        "Task Management",
+        "Resource Management",
+        "Time Management",
+        "Communication Management",
+      ],
+      benefits: [
+        "Improved Efficiency",
+        "Clear focus and Objectives",
+        "Better Resource Utilization",
+        "Effective Risk Management",
+        "Cost and Time Control",
+      ],
+      slug: "facility-management",
     },
   ]
 
@@ -260,7 +307,7 @@ export default function ServicesPage() {
               }`}
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
-              CREATIVE DESIGN
+              OUR SERVICES
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light italic text-gray-300 mb-6 sm:mb-8">
               solution for brands
