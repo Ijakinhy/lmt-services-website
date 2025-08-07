@@ -179,7 +179,10 @@ export default function AboutUs() {
   ]
 
   return (
-    <section className="bg-white dark:bg-black text-gray-900 dark:text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
+     <section
+      id="about-section"
+      className="bg-white dark:bg-black text-gray-900 dark:text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Main content section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">

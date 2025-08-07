@@ -19,6 +19,10 @@ const menuLinks = [
         href: "/services"
     },
     {
+        label: "PRODUCTIONS",
+        href: "/productions"
+    },
+    {
         label: "ABOUT US",
         href: "/about"
     },
@@ -119,6 +123,13 @@ export default function NavBar() {
                             onClick={toggleMenu}
                         >
                             <TextSlideUpDown href="/services" className="text-white  h-[24px]" label="SERVICES" />
+                            <ArrowUpRightIcon className="h-5 w-5 " />
+                        </div>
+                         <div
+                            className="text-white text-xl mt-3.5 py-4 border-b border-gray-800  transition-colors flex items-center justify-between"
+                            onClick={toggleMenu}
+                        >
+                            <TextSlideUpDown href="/prodctions" className="text-white  h-[24px]" label="PRODUCTIONS" />
                             <ArrowUpRightIcon className="h-5 w-5 " />
                         </div>
                         <div
