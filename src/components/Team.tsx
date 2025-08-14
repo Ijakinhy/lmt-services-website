@@ -28,8 +28,8 @@ const team: Team[] = [
 
 /// team  card
 const TeamMemberCard = ({ member, isMobile }: { member: Team; isMobile: boolean }) => (
-  <div role="listitem" className={isMobile ? "snap-start min-w-[406px] mx-auto" : ""}>
-    <div className={`min-h-[202px] ${isMobile ? "min-w-[406px]" : "lg:w-[306px]"}`}>
+  <div role="listitem" className={isMobile ? "snap-start max-w-[406px] mx-auto" : ""}>
+    <div className={`min-h-[202px] ${isMobile ? "w-[300px]" : "lg:w-[306px]"}`}>
       <Image
         src={member.profile}
         width={400}

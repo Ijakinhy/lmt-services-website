@@ -58,7 +58,7 @@ export default function NavBar() {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden md:flex items-center relative  md:gap-[30px] lg:gap-[59px]">
+                    <nav className="hidden lg:flex items-center relative  md:gap-[30px] lg:gap-[59px]">
                         {menuLinks.map(item => <TextSlideUpDown href={item.href} key={item.label} className="text-white text-[16px] font-light tracking-wide h-[24px]" label={item.label} />)}
                     </nav>                    <div className="flex items-center justify-center space-x-4">
 
@@ -70,7 +70,7 @@ export default function NavBar() {
 
 
                         {/* Mobile Menu Button */}
-                        <button onClick={toggleMenu} className="md:hidden text-white p-2" aria-label="Toggle menu">
+                        <button onClick={toggleMenu} className="lg:hidden text-white p-2" aria-label="Toggle menu">
                             <Menu className="h-6 w-6" />
                         </button>
                     </div>
@@ -84,7 +84,7 @@ export default function NavBar() {
 
 
             <div
-                className={`fixed inset-0 bg-black transform transition-transform duration-300 ease-in-out z-50 md:hidden ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'
+                className={`fixed inset-0 bg-black transform transition-transform duration-300 ease-in-out z-50 lg:hidden ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'
                     }`}
             >
 
@@ -125,7 +125,7 @@ export default function NavBar() {
                             <TextSlideUpDown href="/services" className="text-white  h-[24px]" label="SERVICES" />
                             <ArrowUpRightIcon className="h-5 w-5 " />
                         </div>
-                         <div
+                        <div
                             className="text-white text-xl mt-3.5 py-4 border-b border-gray-800  transition-colors flex items-center justify-between"
                             onClick={toggleMenu}
                         >
