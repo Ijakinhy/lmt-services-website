@@ -57,7 +57,7 @@ const productionsData: Record<string, ProductionData> = {
     ],
     technologies: ["NUXT", "SERVER_SIDE"],
     images: [
-     
+
     ],
     testimonial: {
       quote:
@@ -110,8 +110,9 @@ const productionsData: Record<string, ProductionData> = {
   },
 }
 
-export default function ProductionDetailPage({ params }: { params: { slug: string } }) {
-  const production = productionsData[params.slug]
+export default async function ProductionDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const production = productionsData[slug]
 
   if (!production) {
     notFound()
@@ -119,7 +120,7 @@ export default function ProductionDetailPage({ params }: { params: { slug: strin
 
   return (
     <div className="bg-white dark:bg-black text-gray-900 dark:text-white min-h-screen transition-colors duration-300">
-      
+
 
       {/* Header */}
       <header className="pt-20 pb-8 border-b border-gray-200 dark:border-gray-800">
